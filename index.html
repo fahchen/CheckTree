@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <title>test</title>
+  <meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <style type="text/css">
+    *{
+    	margin: auto;
+    }
+    div{
+    	max-width:480px;
+    	padding: 10px;
+    	overflow: hidden;
+    }
+    ul,li{
+      list-style-type: none;
+    }
+    label, input{
+      color: #2b2b2b;
+      cursor: pointer;
+      font-weight:bold;
+    }
+    label:hover{
+      color:#12c;
+    }
+    input[type="checkbox"]{
+      display: none;
+    }
+    .checkbtn{
+      display: inline-block;
+      width:20px;
+      height:20px;
+    }
+    .unchecked{
+      background: url(1.png) no-repeat 0 0px;
+    }
+    .halfchecked{
+      background: url(2.png) no-repeat 0 0px;
+    }
+    .allchecked{
+      background: url(3.png) no-repeat 0 0px;
+    }
+    .foldbtn{
+      display: inline-block;
+      width:20px;
+      height:20px;
+    }
+    .folded{
+      background: url(zu1.jpg) no-repeat 0 0px;
+    }
+    .expanded{
+      background: url(zu2.jpg) no-repeat 0 0px;
+    }
+    .nothing{
+      background: transparent no-repeat 0 4px;
+    }
+    span{
+      cursor: pointer;
+    }
+    </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="checktree.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".tree").CheckTree();
+    });
+  </script>
+</head>
+<body>
+
+  <ul class="tree">
+    <li>
+      <input type="checkbox" name="sel1" value="1" id="sel1">
+      <label>电子科技大学</label>
+      <ul>
+        <li>
+          <input type="checkbox" name="sel2" value="1" id="sel2">
+          <label>通信与信息工程学院</label>
+          <ul>
+            <li>
+              <input type="checkbox" name="sel5" value="1" id="sel5">
+              <label>信息工程</label>
+              <ul>
+                <li>
+                  <input type="checkbox" name="sel8" value="1" id="sel8">
+                  <label>信息工程一班</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="sel9" value="1" id="sel9">
+                  <label>信息工程二班</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" name="sel6" value="1" id="sel6">
+              <label>网络工程</label>
+              <ul>
+                <li>
+                  <input type="checkbox" name="sel10" value="1" id="sel10">
+                  <label>网络工程一班</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="sel11" value="1" id="sel11">
+                  <label>网络工程二班</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="sel12" value="1" id="sel12">
+                  <label>网络工程三班</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" name="sel7" value="1" id="sel7">
+              <label>通信工程</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" name="sel3" value="1" id="sel3">
+          <label>电子工程学院</label>
+        </li>
+        <li>
+          <input type="checkbox" name="sel4" value="1" id="sel4">
+          <label>外国语学院</label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
